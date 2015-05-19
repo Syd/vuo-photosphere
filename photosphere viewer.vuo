@@ -8,42 +8,31 @@
 
 digraph G
 {
-FetchImage [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-1074,582" _url="\"PANO_20150516_131544.jpg\""];
-FireOnDisplayRefresh [type="vuo.event.fireOnDisplayRefresh" version="1.0.0" label="Fire on Display Refresh|<refresh>refresh\l|<requestedFrame>requestedFrame\r" pos="-1236,103" _requestedFrame_eventThrottling="drop"];
-FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-1175,357" _started_eventThrottling="enqueue"];
-Get2DPointValues2 [type="vuo.point.get.VuoPoint2d" version="2.0.0" label="Get 2D Point Values|<refresh>refresh\l|<point>point\l|<x>x\r|<y>y\r" pos="-677,1194"];
-Make3DPoint4 [type="vuo.point.make.VuoPoint3d" version="2.0.0" label="Make 3D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<z>z\l|<point>point\r" pos="-323,1189" _z="0.000000"];
-Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="-60,1066" _translation="{\"x\":0.000000,\"y\":0.000000,\"z\":0.000000}" _scale="{\"x\":-1.000000,\"y\":-1.000000,\"z\":-1.000000}"];
-MakeAmbientLight2 [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="-178,33" _color="{\"r\":1.000000,\"g\":1.000000,\"b\":1.000000,\"a\":1.000000}" _brightness="1.000000"];
-MakeList2 [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="313,195"];
-MakeList5 [type="vuo.list.make.3.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="263,165"];
-MakeList7 [type="vuo.list.make.3.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="326,435"];
-MakePerspectiveCamera [type="vuo.scene.make.camera.perspective" version="1.0.0" label="Make Perspective Camera|<refresh>refresh\l|<name>name\l|<position>position\l|<rotation>rotation\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<object>object\r" pos="-715,878" _name="\"camera\"" _position="{\"x\":0.100000,\"y\":0.000000,\"z\":0.100000}" _rotation="{\"x\":0.000000,\"y\":0.000000,\"z\":0.000000}" _fieldOfView="90.000000" _distanceMin="0.100000" _distanceMax="17.000000"];
-MakeSphere2 [type="vuo.scene.make.sphere.VuoImage" version="1.0.0" label="Make Sphere|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<object>object\r" pos="-378,400" _rows="256" _columns="256"];
-ReceiveMouseDrags [type="vuo.mouse.drag" version="1.0.2" label="Receive Mouse Drags|<refresh>refresh\l|<window>window\l|<button>button\l|<modifierKey>modifierKey\l|<dragStarted>dragStarted\r|<dragMovedTo>dragMovedTo\r|<dragEnded>dragEnded\r" pos="-1014,1170" _button="\"left\"" _modifierKey="\"any\"" _dragStarted_eventThrottling="enqueue" _dragMovedTo_eventThrottling="drop" _dragEnded_eventThrottling="enqueue"];
-RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="406,424" _width="1024" _height="768" _colorDepth="\"8bpc\"" _cameraName="\"camera\""];
-RenderSceneToWindow [type="vuo.scene.render.window" version="2.2.0" label="Render Scene to Window|<refresh>refresh\l|<objects>objects\l|<cameraName>cameraName\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r" pos="359,154" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
-SendImageViaSyphon [type="vuo.syphon.send" version="1.0.1" label="Send Image via Syphon|<refresh>refresh\l|<serverName>serverName\l|<sendImage>sendImage\l" pos="905,372" _serverName="\"photosphere viewer\""];
+FetchImage [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-1332,842" _url="\"PANO_20150516_131544.jpg\""];
+FireOnDisplayRefresh [type="vuo.event.fireOnDisplayRefresh" version="1.0.0" label="Fire on Display Refresh|<refresh>refresh\l|<requestedFrame>requestedFrame\r" pos="-1448,-16" _requestedFrame_eventThrottling="drop"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-1460,566" _started_eventThrottling="enqueue"];
+Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="-1192,607" _translation="{\"x\":0.000000,\"y\":0.000000,\"z\":0.000000}" _rotation="{\"x\":0.000000,\"y\":0.000000,\"z\":180.000000}" _scale="{\"x\":-10.000000,\"y\":-10.000000,\"z\":-10.000000}"];
+MakeAmbientLight2 [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="-1299,179" _color="{\"r\":1.000000,\"g\":1.000000,\"b\":1.000000,\"a\":1.000000}" _brightness="1.000000"];
+MakeDraggableCamera [type="vuo.scene.make.camera.drag" version="1.0.1" label="Make Draggable Camera|<refresh>refresh\l|<name>name\l|<modifierKey>modifierKey\l|<window>window\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<reset>reset\l|<updatedCamera>updatedCamera\r" pos="-1066,351" _name="\"camera\"" _modifierKey="\"any\"" _fieldOfView="90.000000" _distanceMin="0.100000" _distanceMax="10.000000" _updatedCamera_eventThrottling="enqueue"];
+MakeList [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-425,39"];
+MakeList7 [type="vuo.list.make.3.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-833,127"];
+MakeSphere2 [type="vuo.scene.make.sphere.VuoImage" version="1.0.0" label="Make Sphere|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<object>object\r" pos="-922,675" _rows="256" _columns="256"];
+RenderImageToWindow [type="vuo.image.render.window" version="3.2.1" label="Render Image to Window|<refresh>refresh\l|<image>image\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r" pos="-379,13" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="-753,116" _width="1024" _height="768" _colorDepth="\"8bpc\"" _cameraName="\"camera\""];
+SendImageViaSyphon [type="vuo.syphon.send" version="1.0.1" label="Send Image via Syphon|<refresh>refresh\l|<serverName>serverName\l|<sendImage>sendImage\l" pos="-368,269" _serverName="\"photosphere viewer\""];
 
 FetchImage:image -> MakeSphere2:material;
-FireOnDisplayRefresh:requestedFrame -> Make3DTransform:refresh;
-FireOnDisplayRefresh:requestedFrame -> MakeAmbientLight2:refresh;
-FireOnDisplayRefresh:requestedFrame -> MakePerspectiveCamera:refresh;
 FireOnDisplayRefresh:requestedFrame -> RenderSceneToImage:refresh;
 FireOnStart:started -> FetchImage:refresh;
-Get2DPointValues2:x -> Make3DPoint4:y;
-Get2DPointValues2:y -> Make3DPoint4:x;
-Make3DPoint4:point -> Make3DTransform:rotation;
+FireOnStart:started -> Make3DTransform:refresh;
+FireOnStart:started -> MakeAmbientLight2:refresh;
+FireOnStart:started -> MakeDraggableCamera:refresh;
 Make3DTransform:transform -> MakeSphere2:transform;
-MakeAmbientLight2:object -> MakeList5:1;
 MakeAmbientLight2:object -> MakeList7:2;
-MakeList2:list -> RenderSceneToWindow:setWindowProperties;
-MakeList5:list -> RenderSceneToWindow:objects;
+MakeDraggableCamera:updatedCamera -> MakeList7:3;
 MakeList7:list -> RenderSceneToImage:objects;
-MakePerspectiveCamera:object -> MakeList5:3;
-MakePerspectiveCamera:object -> MakeList7:3;
-MakeSphere2:object -> MakeList5:2;
+MakeList:list -> RenderImageToWindow:setWindowProperties;
 MakeSphere2:object -> MakeList7:1;
-ReceiveMouseDrags:dragMovedTo -> Get2DPointValues2:point;
+RenderSceneToImage:image -> RenderImageToWindow:image;
 RenderSceneToImage:image -> SendImageViaSyphon:sendImage;
 }
