@@ -10,5 +10,5 @@ Open the composition in Vuo editor and use the mouse to manipulate. Output will 
 
 Your composition can also be exported to a Mac OSX Application.
 
-### Known Issues
-Slight seam line where the texture repeats on the sphere.
+### Thanks!
+Steve Mokris (vuo.org) for help fixing the seam line 

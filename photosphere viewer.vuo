@@ -8,12 +8,13 @@
 
 digraph G
 {
-FetchImage [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-1332,842" _url="\"PANO_20150516_131544.jpg\""];
+ChangeWrapMode [type="vuo.image.wrapMode" version="2.0.0" label="Change Wrap Mode|<refresh>refresh\l|<image>image\l|<wrapMode>wrapMode\l|<outputImage>outputImage\r" pos="-1186,891" _wrapMode="\"repeat\""];
+FetchImage [type="vuo.image.fetch" version="2.0.0" label="Fetch Image|<refresh>refresh\l|<url>url\l|<image>image\r" pos="-1431,863" _url="\"example.jpg\""];
 FireOnDisplayRefresh [type="vuo.event.fireOnDisplayRefresh" version="1.0.0" label="Fire on Display Refresh|<refresh>refresh\l|<requestedFrame>requestedFrame\r" pos="-1448,-16" _requestedFrame_eventThrottling="drop"];
 FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-1460,566" _started_eventThrottling="enqueue"];
 Make3DTransform [type="vuo.transform.make" version="1.0.0" label="Make 3D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="-1192,607" _translation="{\"x\":0.000000,\"y\":0.000000,\"z\":0.000000}" _rotation="{\"x\":0.000000,\"y\":0.000000,\"z\":180.000000}" _scale="{\"x\":-10.000000,\"y\":-10.000000,\"z\":-10.000000}"];
 MakeAmbientLight2 [type="vuo.scene.make.light.ambient" version="1.0.0" label="Make Ambient Light|<refresh>refresh\l|<color>color\l|<brightness>brightness\l|<object>object\r" pos="-1299,179" _color="{\"r\":1.000000,\"g\":1.000000,\"b\":1.000000,\"a\":1.000000}" _brightness="1.000000"];
-MakeDraggableCamera [type="vuo.scene.make.camera.drag" version="1.0.1" label="Make Draggable Camera|<refresh>refresh\l|<name>name\l|<modifierKey>modifierKey\l|<window>window\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<reset>reset\l|<updatedCamera>updatedCamera\r" pos="-1066,351" _name="\"camera\"" _modifierKey="\"any\"" _fieldOfView="90.000000" _distanceMin="0.100000" _distanceMax="10.000000" _updatedCamera_eventThrottling="enqueue"];
+MakeDraggableCamera [type="vuo.scene.make.camera.drag" version="1.0.1" label="Make Draggable Camera|<refresh>refresh\l|<name>name\l|<modifierKey>modifierKey\l|<window>window\l|<fieldOfView>fieldOfView\l|<distanceMin>distanceMin\l|<distanceMax>distanceMax\l|<reset>reset\l|<updatedCamera>updatedCamera\r" pos="-1180,325" _name="\"camera\"" _modifierKey="\"any\"" _fieldOfView="90.000000" _distanceMin="0.100000" _distanceMax="10.000000" _updatedCamera_eventThrottling="enqueue"];
 MakeList [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-425,39"];
 MakeList7 [type="vuo.list.make.3.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-833,127"];
 MakeSphere2 [type="vuo.scene.make.sphere.VuoImage" version="1.0.0" label="Make Sphere|<refresh>refresh\l|<transform>transform\l|<material>material\l|<rows>rows\l|<columns>columns\l|<object>object\r" pos="-922,675" _rows="256" _columns="256"];
@@ -21,12 +22,12 @@ RenderImageToWindow [type="vuo.image.render.window" version="3.2.1" label="Rende
 RenderSceneToImage [type="vuo.scene.render.image" version="1.1.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="-753,116" _width="1024" _height="768" _colorDepth="\"8bpc\"" _cameraName="\"camera\""];
 SendImageViaSyphon [type="vuo.syphon.send" version="1.0.1" label="Send Image via Syphon|<refresh>refresh\l|<serverName>serverName\l|<sendImage>sendImage\l" pos="-368,269" _serverName="\"photosphere viewer\""];
 
-FetchImage:image -> MakeSphere2:material;
+ChangeWrapMode:outputImage -> MakeSphere2:material;
+FetchImage:image -> ChangeWrapMode:image;
 FireOnDisplayRefresh:requestedFrame -> RenderSceneToImage:refresh;
 FireOnStart:started -> FetchImage:refresh;
 FireOnStart:started -> Make3DTransform:refresh;
 FireOnStart:started -> MakeAmbientLight2:refresh;
-FireOnStart:started -> MakeDraggableCamera:refresh;
 Make3DTransform:transform -> MakeSphere2:transform;
 MakeAmbientLight2:object -> MakeList7:2;
 MakeDraggableCamera:updatedCamera -> MakeList7:3;
